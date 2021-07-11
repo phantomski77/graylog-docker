@@ -39,6 +39,16 @@ RUN \
   tar --extract --gzip --file "/tmp/graylog-${GRAYLOG_VERSION}.tgz" --strip-components=1 --directory /opt/graylog
 
 RUN \
+  curl \
+    --silent \
+    --location \
+    --retry 3 \
+    --output "/tmp/graylog-integrations-plugins-${GRAYLOG_VERSION}.tgz" \
+    "https://downloads.graylog.org/releases/graylog-integrations/graylog-integrations-plugins-${GRAYLOG_VERSION}.tgz"
+
+RUN tar --extract --gzip --file "/tmp/graylog-integrations-plugins-${GRAYLOG_VERSION}.tgz" --strip-components=1 --directory /opt/graylog
+  
+RUN \
   install \
     --directory \
     --mode=0750 \
@@ -145,10 +155,10 @@ HEALTHCHECK \
 
 LABEL maintainer="Graylog, Inc. <hello@graylog.com>" \
       org.label-schema.name="Graylog Docker Image" \
-      org.label-schema.description="Official Graylog Docker image" \
+      org.label-schema.description="arm64v8 version of Official Graylog Docker image" \
       org.label-schema.url="https://www.graylog.org/" \
       org.label-schema.vcs-ref=${VCS_REF} \
-      org.label-schema.vcs-url="https://github.com/Graylog2/graylog-docker" \
+      org.label-schema.vcs-url="https://github.com/phantomski77/graylog-docker" \
       org.label-schema.vendor="Graylog, Inc." \
       org.label-schema.version=${GRAYLOG_VERSION} \
       org.label-schema.schema-version="1.0" \
