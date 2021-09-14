@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------------------------------------
 #
 # layer for download and verifying
-FROM arm64v8/debian:buster-slim as graylog-downloader
+FROM debian:bullseye-slim as graylog-downloader
 
 ARG VCS_REF
 ARG GRAYLOG_VERSION
