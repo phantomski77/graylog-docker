@@ -3,7 +3,7 @@
 ## What is this ##
 The official [Docker2/graylog-docker GitHub repo](https://github.com/Graylog2/graylog-docker) unfortunately doesn't have *arm64v8* compatible `Dockerfile` yet, so I have added a new directory `oss-arm64`, modified the official Dockerfile and few supporting files with latest available and compatible arm64v8 dependencies and removed some deprecated JVM tags.
 
-Latest stable version of official Graylog is *4.1.3* - this arm64v8 customised version is available with the tags `4.1.3-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog).
+Latest stable version of official Graylog is *4.1.5* - this arm64v8 customised version is available with the tags `4.1.5-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog).
 
 
 ## What is changed in this fork?

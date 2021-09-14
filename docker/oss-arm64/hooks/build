@@ -10,4 +10,4 @@ docker build --build-arg VCS_REF=$GIT_SHA1 \
              --build-arg GRAYLOG_VERSION=4.1.3 \
              --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              --file docker/oss-arm64/Dockerfile \
-             --tag phantomski/graylog:4.1.3-arm64 .
+             --tag phantomski/graylog:4.1.5-arm64 .
