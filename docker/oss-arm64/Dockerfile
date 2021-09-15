@@ -63,7 +63,7 @@ RUN \
 #
 # final layer
 # use the smallest debian with headless openjdk and copying files from download layers
-FROM arm64v8/openjdk:11-jre-slim-buster
+FROM openjdk:11-jre-slim-bullseye
 
 ARG VCS_REF
 ARG GRAYLOG_VERSION
