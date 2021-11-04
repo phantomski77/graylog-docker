@@ -2,7 +2,7 @@
 
 ## What is this
 
-Latest stable version of official Graylog is *4.2* - this `arm64v8` customised version is available pre-built with the tags `4.2-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
+Latest stable version of official Graylog is *4.2.1* - this `arm64v8` customised version is available pre-built with the tags `4.2.1-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
 
 ## Usage
 
@@ -22,7 +22,7 @@ This additional folder contains all the necessary modified files to build an `ar
 * Debian Bullseye Slim
     * v11.1 Slim (`debian:bullseye-slim`)
 * Java JDK JRE
-    * Java SE 11 (LTS) JDK JRE 11.0.12+8 (`openjdk:11-jre-slim-bullseye`)
+    * Java SE 11 (LTS) JDK JRE 11.0.13+8 (`openjdk:11-jre-slim-bullseye`)
     * 11 LTS is the latest useable as Java SE 16 doesn’t have small JRE, only full JDK. Also, in 16, the old CMS Garbage Collector is deprecated.
     * Removed JRE options:
         * -XX:+UseCGroupMemoryLimitForHeap
