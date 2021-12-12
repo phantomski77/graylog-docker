@@ -2,7 +2,7 @@
 
 ## What is this
 
-Latest stable version of official Graylog is *4.2.2* - this `arm64v8` customised version is available pre-built with the tags `4.2.2-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
+Latest stable version of official Graylog is *4.2.3* - this `arm64v8` customised version is available pre-built with the tags `4.2.3-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
 
 ## Usage
 
