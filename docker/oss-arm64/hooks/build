@@ -7,9 +7,9 @@ cd ../../..
 
 # Build Graylog
 docker build --build-arg VCS_REF=$GIT_SHA1 \
-             --build-arg GRAYLOG_VERSION=4.2.6 \
+             --build-arg GRAYLOG_VERSION=4.2.7 \
              --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              --file docker/oss-arm64/Dockerfile \
              --no-cache \
              --pull \
-             --tag phantomski/graylog:4.2.6-arm64 .
+             --tag phantomski/graylog:4.2.7-arm64 .
