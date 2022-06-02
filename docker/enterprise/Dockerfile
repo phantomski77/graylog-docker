@@ -10,7 +10,6 @@ ARG LOCAL_BUILD_TGZ
 ARG GRAYLOG_HOME=/usr/share/graylog
 ARG GRAYLOG_UID=1100
 ARG GRAYLOG_GID=1100
-ARG TARGETPLATFORM
 
 WORKDIR /tmp
 
@@ -43,13 +42,6 @@ RUN if [ "${LOCAL_BUILD_TGZ}" ]; then \
         tar --extract --gzip --file "/tmp/graylog.tgz" --strip-components=1 --directory /opt/graylog; \
     fi
 
-# Reduce image size by removing large cross platform chromedriver binaries
-RUN if [ "${TARGETPLATFORM}" != "linux/arm64" ]; then \
-        rm /opt/graylog/bin/*_arm64; \
-    fi
-RUN if [ "${TARGETPLATFORM}" = "linux/arm64" ]; then \
-        rm /opt/graylog/bin/*_amd64; \
-    fi
 
 RUN \
   install \
