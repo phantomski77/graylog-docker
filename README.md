@@ -4,7 +4,7 @@
 
 [hub]: https://hub.docker.com/r/graylog/graylog/
 
-The latest stable version of Graylog is **`4.2.9`**.
+The latest stable version of Graylog is **`4.3.1`**.
 
 ## What is Graylog?
 
@@ -21,8 +21,8 @@ This is the open source [Graylog ](https://hub.docker.com/r/graylog/graylog/) im
 
 | Java Version  | Platform  | Tags  |
 |---|---|---|
-| OpenJDK 8  | `linux/amd64`, `linux/arm64` | `4.2`, `4.2.9`, `4.2.9-1` |
-| OpenJDK 11  | `linux/amd64`, `linux/arm64`  | `4.2-jre11`, `4.2.9-jre11`, `4.2.9-1-jre11`  |
+| OpenJDK 8  | `linux/amd64`, `linux/arm64` | `4.3`, `4.3.1`, `4.3.1-1` |
+| OpenJDK 11  | `linux/amd64`, `linux/arm64`  | `4.3-jre11`, `4.3.1-jre11`, `4.3.1-1-jre11`  |
 
 > Note: There is no 'latest' tag. You'll need to specify which version you want.
 
@@ -32,19 +32,19 @@ This is the [Graylog Enterprise](https://hub.docker.com/r/graylog/graylog-enterp
 
 | Java Version  | Platform  | Tags  |
 |---|---|---|
-| OpenJDK 8  | `linux/amd64` | `4.2`, `4.2.9`, `4.2.9-1` |
-| OpenJDK 11  | `linux/amd64` | `4.2-jre11`, `4.2.9-jre11`, `4.2.9-1-jre11`  |
+| OpenJDK 8  | `linux/amd64` | `4.3`, `4.3.1`, `4.3.1-1` |
+| OpenJDK 11  | `linux/amd64` | `4.3-jre11`, `4.3.1-jre11`, `4.3.1-1-jre11`  |
 
 
 #### `graylog/graylog-forwarder`
 
 This image runs the [Graylog Forwarder](https://hub.docker.com/r/graylog/graylog-forwarder/). Documentation on the Forwarder can be found [here](https://docs.graylog.org/docs/forwarder).
 
-The latest stable version is **`4.7`**, with support for Java 8 on platform `linux/amd64`.
+The latest stable version is **`4.8`**, with support for Java 8 on platform `linux/amd64` and `linux/arm64`.
 
 | Java Version  | Platform  | Tags  |
 |---|---|---|
-| OpenJDK 8 | `linux/amd64`, `linux/arm64` | `4.7`, `forwarder-4.7-1` |
+| OpenJDK 8 | `linux/amd64`, `linux/arm64` | `4.8`, `forwarder-4.8-1` |
 
 
 ## Architecture
