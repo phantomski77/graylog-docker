@@ -1,7 +1,7 @@
 ARG JAVA_VERSION_MAJOR=11
 #
 # layer for download and verifying
-FROM debian:bullseye-slim as graylog-downloader
+FROM ubuntu:jammy as graylog-downloader
 
 ARG VCS_REF
 ARG GRAYLOG_VERSION
@@ -50,7 +50,7 @@ COPY config ${GRAYLOG_HOME}/data/config
 #
 # final layer
 # use the smallest debian with headless openjdk and copying files from download layers
-FROM openjdk:${JAVA_VERSION_MAJOR}-jre-slim-bullseye
+FROM eclipse-temurin:${JAVA_VERSION_MAJOR}-jre-jammy
 
 ARG VCS_REF
 ARG GRAYLOG_VERSION
@@ -103,6 +103,10 @@ RUN \
     --quiet \
     "${GRAYLOG_USER}" && \
   setcap 'cap_net_bind_service=+ep' "${JAVA_HOME}/bin/java" && \
+  # https://github.com/docker-library/openjdk/blob/da594d91b0364d5f1a32e0ce6b4d3fd8a9116844/8/jdk/slim-bullseye/Dockerfile#L105
+  # https://github.com/docker-library/openjdk/issues/331#issuecomment-498834472
+  find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf && \
+  ldconfig && \
   apt-get remove --assume-yes --purge \
     apt-utils > /dev/null && \
   rm -f /etc/apt/sources.list.d/* && \

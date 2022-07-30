@@ -2,7 +2,7 @@
 
 ## What is this
 
-Latest stable version of official Graylog is *4.3.1* - this `arm64v8` customised version is available pre-built with the tags `4.3.1-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
+Latest stable version of official Graylog is *4.3.3* - this `arm64v8` customised version is available pre-built with the tags `4.3.3-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
 
 ## Usage
 
@@ -14,15 +14,15 @@ I have added a new directory `oss-arm64`, modified the official `Dockerfile` and
 
 ### Additional oss-arm64 folder
 
-This additional folder contains all the necessary modified files to build an `arm64v8` compatible Graylog image for running on Raspberry Pi 4 and possibly other arm64 architecture based systems (Odroid C2, Odroid C4, Odroid N2+, Apple M1 Macs, etc.)
+This additional folder contains all the necessary modified files to build an `arm64v8` compatible Graylog image for running on Raspberry Pi 4 and possibly other arm64 architecture based systems (Odroid C2, Odroid C4, Odroid N2+, Apple M1/M2 Macs, Amazon EC2 on AWS Graviton, Microsoft Project Volterra, etc.)
 
 ### Modified files in oss-arm64 folder
 
 **Dockerfile** - to build an `arm64v8` compatible image, using latest available dependencies:
-* Debian Bullseye Slim
-    * v11.3 Slim (`debian:bullseye-slim`)
-* Java JDK JRE
-    * Java SE 11 (LTS) JDK JRE 11.0.15.1+2 (`openjdk:11-jre-slim-bullseye`)
+* Ubuntu Jammy
+    * v22.04 Jammy Jellyfish LTS (`ubuntu:jammy`)
+* Eclipse Temurin Java JDK JRE
+    * Java SE 11 (LTS) JDK JRE 11.0.16+8 (`eclipse-temurin:11-jre-jammy`)
     * 11 LTS is the latest useable as Java SE 16 doesn’t have small JRE, only full JDK. Also, in 16, the old CMS Garbage Collector is deprecated.
     * Removed JRE options:
         * -XX:+UseCGroupMemoryLimitForHeap
