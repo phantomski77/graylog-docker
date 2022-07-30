@@ -49,7 +49,6 @@ COPY config ${GRAYLOG_HOME}/data/config
 # -------------------------------------------------------------------------------------------------
 #
 # final layer
-# use the smallest debian with headless openjdk and copying files from download layers
 FROM eclipse-temurin:${JAVA_VERSION_MAJOR}-jre-jammy
 
 ARG VCS_REF
@@ -68,7 +67,6 @@ WORKDIR ${GRAYLOG_HOME}
 
 # hadolint ignore=DL3027,DL3008
 RUN \
-  echo "export JAVA_HOME=/usr/local/openjdk-${JAVA_VERSION_MAJOR}"     > /etc/profile.d/graylog.sh && \
   echo "export BUILD_DATE=${BUILD_DATE}"           >> /etc/profile.d/graylog.sh && \
   echo "export GRAYLOG_VERSION=${GRAYLOG_VERSION}" >> /etc/profile.d/graylog.sh && \
   echo "export GRAYLOG_SERVER_JAVA_OPTS='-Dlog4j2.formatMsgNoLookups=true -Djdk.tls.acknowledgeCloseNotify=true -XX:+UnlockExperimentalVMOptions -XX:NewRatio=1 -XX:MaxMetaspaceSize=256m -server -XX:+ResizeTLAB -XX:-OmitStackTraceInFastThrow'" >> /etc/profile.d/graylog.sh && \
