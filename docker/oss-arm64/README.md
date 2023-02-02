@@ -2,7 +2,7 @@
 
 ## What is this
 
-Latest stable version of official Graylog is *4.3.5* - this `arm64v8` customised version is available pre-built with the tags `4.3.5-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
+Latest stable version of official Graylog is *4.3.12* - this `arm64v8` customised version is available pre-built with the tags `4.3.12-arm64`, `arm64` and `latest` on [Docker hub](https://hub.docker.com/r/phantomski/graylog) with the detailed description. 
 
 ## Usage
 
@@ -20,9 +20,9 @@ This additional folder contains all the necessary modified files to build an `ar
 
 **Dockerfile** - to build an `arm64v8` compatible image, using latest available dependencies:
 * Ubuntu Jammy
-    * v22.04 Jammy Jellyfish LTS (`ubuntu:jammy`)
+    * v22.04.1 LTS Jammy Jellyfish (`ubuntu:jammy`)
 * Eclipse Temurin Java JDK JRE
-    * Java SE 11 (LTS) JDK JRE 11.0.16.1+1 (`eclipse-temurin:11-jre-jammy`)
+    * Java SE 11 (LTS) JDK JRE 11.0.18+10 (`eclipse-temurin:11-jre-jammy`)
     * Removed JRE options:
         * -XX:+UseCGroupMemoryLimitForHeap
         * -XX:+UseConcMarkSweepGC
