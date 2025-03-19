@@ -12,4 +12,6 @@ docker build --build-arg VCS_REF=$GIT_SHA1 \
              --file docker/oss-arm64/Dockerfile \
              --no-cache \
              --pull \
-             --tag phantomski/graylog:4.3.15-arm64 .
+             --tag phantomski/graylog:4.3.15-arm64-java23 \
+             --tag phantomski/graylog:arm64 \
+             --tag phantomski/graylog:latest .

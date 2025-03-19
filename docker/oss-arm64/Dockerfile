@@ -1,10 +1,12 @@
-ARG JAVA_VERSION_MAJOR=21
+ARG JAVA_VERSION_MAJOR=23
 #
 # layer for download and verifying
 FROM ubuntu:noble AS graylog-downloader
 
 ARG VCS_REF
+ARG BUILD_DATE
 ARG GRAYLOG_VERSION
+ARG GRAYLOG_PRODUCT=graylog
 ARG GRAYLOG_HOME=/usr/share/graylog
 ARG GRAYLOG_UID=1100
 ARG GRAYLOG_GID=1100
